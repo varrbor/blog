@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('default');
+    return view('page/main');
 });
+
