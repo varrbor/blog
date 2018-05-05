@@ -15,4 +15,13 @@ class BlogController extends Controller
             'title' => 'Home',
         ]);
     }
+
+    public function Post()
+    {
+//        $tasks=DB::table('tasks')->get();
+//        return $tasks;
+        return view('page/post',[
+            'title' => 'Home',
+        ]);
+    }
 }

@@ -13,3 +13,5 @@
 
 Route::get('/', 'BlogController@index');
 
+
+Route::get('/post', 'BlogController@post');
