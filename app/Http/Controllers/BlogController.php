@@ -9,9 +9,12 @@ class BlogController extends Controller
 {
     public function Index()
     {
-//        $tasks=DB::table('tasks')->get();
-//        return $tasks;
-        return view('page/main',[
+        $posts=DB::table('posts')->get();
+//echo '<pre>';
+//print_r($posts);
+//echo '</pre>';
+//die();
+return view('page/main',[
             'title' => 'Home',
         ]);
     }
