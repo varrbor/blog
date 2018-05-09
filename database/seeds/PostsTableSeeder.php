@@ -13,6 +13,7 @@ class PostsTableSeeder extends Seeder
     {
         $material = array(
             array(
+                'id' =>1,
                 'title' => str_random(10),
                 'name' => 'Twas The Night Before The Christmas Party',
                 'intro' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley .',
@@ -22,6 +23,7 @@ class PostsTableSeeder extends Seeder
                 'updated_at' =>'2018-05-07 08:22:00'
             ),
             array(
+                'id' =>2,
                 'title' => str_random(10),
                 'name' => 'Twas The Night Before The Christmas Party',
                 'intro' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley .',
@@ -31,6 +33,7 @@ class PostsTableSeeder extends Seeder
                 'updated_at' =>'2018-05-07 08:22:00'
             ),
             array(
+                'id' =>3,
                 'title' => str_random(10),
                 'name' => 'Twas The Night Before The Christmas Party',
                 'intro' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley .',
@@ -40,6 +43,7 @@ class PostsTableSeeder extends Seeder
                 'updated_at' =>'2018-05-07 08:22:00'
             ),
             array(
+                'id' =>4,
                 'title' => str_random(10),
                 'name' => 'Twas The Night Before The Christmas Party',
                 'intro' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley .',

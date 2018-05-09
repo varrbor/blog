@@ -14,9 +14,10 @@ class BlogController extends Controller
 //print_r($posts);
 //echo '</pre>';
 //die();
-return view('page/main',[
-            'title' => 'Home',
-        ]);
+        return view('page/main',[
+                    'title' => 'Home',
+                    'posts' =>$posts
+                ]);
     }
 
     public function Post()
