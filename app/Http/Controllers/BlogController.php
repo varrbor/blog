@@ -18,6 +18,11 @@ class BlogController extends Controller
             ->join('categories','posts_has_categories.categories_id','=','categories.id')
             ->get();
 
+        $categories = DB::table('categories as c')
+            ->select('c.*')
+
+            ->get();
+
 //        echo '<pre>';
 //        print_r($posts);
 //        echo '</pre>';
@@ -25,7 +30,8 @@ class BlogController extends Controller
 
         return view('page/main',[
                     'title' => 'Home',
-                    'posts' =>$posts
+                    'posts' =>$posts,
+                    'categories' => $categories
                 ]);
     }
 
