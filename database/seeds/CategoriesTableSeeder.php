@@ -11,15 +11,48 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-//        DB::table('categories')->insert([
-//            'title' => str_random(10),
-//            'name' => str_random(10),
-//            'content' => str_random(10),
-//            'url' => str_random(10),
-//        ]);
 
-        factory(App\User::class, 50)->create()->each(function ($u) {
-            $u->posts()->save(factory(App\Post::class)->make());
-        });
+        $material = array(
+            array(
+                'id' =>1,
+                'title' => 'Snacks',
+                'name' => 'Snacks'
+
+            ),
+
+            array(
+                'id' =>2,
+                'title' => "Meat",
+                'name' => "Meat"
+
+            ),
+            array(
+                'id' =>3,
+                'title' => 'Fruits',
+                'name' => 'Fruits'
+
+            ),
+            array(
+                'id' =>4,
+                'title' => "Grains",
+                'name' => "Grains"
+
+            ),
+            array(
+                'id' =>5,
+                'title' => "National",
+                'name' => "National"
+
+            ),
+            array(
+                'id' =>6,
+                'title' => "Salads",
+                'name' => "Salads"
+
+            ),
+
+        );
+
+        DB::table('categories')->insert($material);
     }
 }
