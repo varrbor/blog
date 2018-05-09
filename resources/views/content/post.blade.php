@@ -17,7 +17,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             @include('content.panel.right')
         </div>
