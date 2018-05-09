@@ -14,7 +14,7 @@ class Users_has_postsTableSeeder extends Seeder
         $material = array(
             array(
                 'users_id' =>1,
-                'posts_id' => 3
+                'posts_id' => 1
             ),  array(
                 'users_id' =>1,
                 'posts_id' => 2

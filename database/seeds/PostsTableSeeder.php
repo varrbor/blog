@@ -51,7 +51,7 @@ class PostsTableSeeder extends Seeder
                 'url' => 'img/be12.jpg',
                 'created_at' => '2018-05-09 08:11:21',
                 'updated_at' =>'2018-05-07 08:22:00'
-            ),
+            )
         );
 
             DB::table('posts')->insert($material);

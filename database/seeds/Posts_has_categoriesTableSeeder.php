@@ -14,11 +14,11 @@ class Posts_has_categoriesTableSeeder extends Seeder
         $material = array(
             array(
                 'posts_id' =>1,
-                'categories_id' => '2',
+                'categories_id' => '6',
             ),
             array(
                 'posts_id' =>2,
-                'categories_id' => '3',
+                'categories_id' => '2',
             ),
             array(
                 'posts_id' =>3,
@@ -26,8 +26,8 @@ class Posts_has_categoriesTableSeeder extends Seeder
             ),
             array(
                 'posts_id' =>4,
-                'categories_id' => '3',
-            ),
+                'categories_id' => '4',
+            )
 
         );
 

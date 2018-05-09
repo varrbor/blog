@@ -10,7 +10,7 @@
                             <img src="{{$post->url}}" alt="" class="img-responsive">
                         </a>
                         <div class="blg-caption">
-                            <p class="blg-caption-p">In <a href="javascript:void(0)">Food</a></p>
+                            <p class="blg-caption-p">In <a href="javascript:void(0)">{{$post->category}}</a></p>
                             <h6 class="blg-caption-p">{{$post->name}}</h6>
                             <p class="blg-caption-p">12 April | By <a href="javascript:void(0)">{{$post->user_name}}</a></p>
                             <p class="text-center">{{$post->intro}}</p>
