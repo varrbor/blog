@@ -9,22 +9,22 @@
     </div>
     <div class="row blg-insta-foto">
         <div class="col-sm-4 col-md-2">
-            <a href="javascript:void(0)"><img src="img/fi1.jpg" alt=""></a>
+            <a href="javascript:void(0)"><img src="{{asset('img/fi1.jpg')}}" alt=""></a>
         </div>
         <div class="col-sm-4 col-md-2 hidden-xs">
-            <a href="javascript:void(0)"><img src="img/fi2.jpg" alt=""></a>
+            <a href="javascript:void(0)"><img src="{{asset('img/fi2.jpg')}}" alt=""></a>
         </div>
         <div class="col-sm-4 col-md-2 hidden-xs">
-            <a href="javascript:void(0)"><img src="img/fi3.jpg" alt=""></a>
+            <a href="javascript:void(0)"><img src="{{asset('img/fi3.jpg')}}" alt=""></a>
         </div>
         <div class="col-md-2 hidden-xs hidden-sm">
-            <a href="javascript:void(0)"><img src="img/fi4.jpg" alt=""></a>
+            <a href="javascript:void(0)"><img src="{{asset('img/fi4.jpg')}}" alt=""></a>
         </div>
         <div class="col-md-2 hidden-xs hidden-sm">
-            <a href="javascript:void(0)"><img src="img/fi5.jpg" alt=""></a>
+            <a href="javascript:void(0)"><img src="{{asset('img/fi5.jpg')}}" alt=""></a>
         </div>
         <div class="col-md-2 hidden-xs hidden-sm">
-            <a href="javascript:void(0)"><img src="img/fi6.jpg" alt=""></a>
+            <a href="javascript:void(0)"><img src="{{asset('img/fi6.jpg')}}" alt=""></a>
         </div>
     </div>
 </div>

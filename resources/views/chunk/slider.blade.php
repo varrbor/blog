@@ -9,7 +9,7 @@
     <!-- Контент слайда (slider wrap)-->
     <div class="carousel-inner">
         <div class="item active">
-            <img src="img/s5.jpg" alt="...">
+            <img src="{{ asset('img/s5.jpg') }}" alt="...">
             <div class="carousel-caption">
 						<span>
 							<a href="javascript:void(0)">Food</a>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="item">
-            <img src="img/s6.jpg" alt="...">
+            <img src="{{ asset('img/s6.jpg') }}" alt="...">
             <div class="carousel-caption">
 						<span>
 							<a href="javascript:void(0)">Food</a>
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="item">
-            <img src="img/s7.jpg" alt="...">
+            <img src="{{ asset('img/s7.jpg') }}" alt="...">
             <div class="carousel-caption">
 						<span>
 							<a href="javascript:void(0)">Food</a>

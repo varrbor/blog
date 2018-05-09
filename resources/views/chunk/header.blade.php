@@ -40,7 +40,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-3 col-lg-4">
                             <a href="index.html" class="blg-logo" title="PCUBE BLOG || HOME PAGE">
-                                <img src="img/logo.png" alt="logo">
+                                <img src="{{ asset('img/logo.png') }}" alt="logo">
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-9 col-lg-8 text-right">
@@ -156,7 +156,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-3 col-lg-4">
                             <a href="index.html" class="blg-logo" title="PCUBE BLOG || HOME PAGE">
-                                <img src="img/logo.png" alt="logo">
+                                <img src="{{ asset('img/logo.png') }}" alt="logo">
                             </a>
                         </div>
                         <div class="col-xs-12 col-sm-9 col-lg-8 text-right">

@@ -11,7 +11,7 @@
                 <div class="col-sm-6 col-md-3 text-center padded">
                     <div class="blg-mini-post">
                         <a href="javascript:void(0)" class="blg-border">
-                            <img src="img/fa1.jpg" alt="" class="img-responsive">
+                            <img src="{{asset('img/fa1.jpg')}}" alt="" class="img-responsive">
                         </a>
                         <div class="blg-caption">
                             <p class="blg-caption-p">In <a href="javascript:void(0)">Business</a></p>
@@ -25,7 +25,7 @@
                 <div class="col-sm-6 col-md-3 text-center padded hidden-xs">
                     <div class="blg-mini-post">
                         <a href="javascript:void(0)" class="blg-border">
-                            <img src="img/fa2.jpg" alt="" class="img-responsive">
+                            <img src="{{asset('img/fa2.jpg')}}" alt="" class="img-responsive">
                         </a>
                         <div class="blg-caption">
                             <p class="blg-caption-p">In <a href="javascript:void(0)">Business</a></p>
@@ -39,7 +39,7 @@
                 <div class="col-sm-6 col-md-3 text-center padded hidden-xs hidden-sm">
                     <div class="blg-mini-post">
                         <a href="javascript:void(0)" class="blg-border">
-                            <img src="img/fa3.jpg" alt="" class="img-responsive">
+                            <img src="{{asset('img/fa3.jpg')}}" alt="" class="img-responsive">
                         </a>
                         <div class="blg-caption">
                             <p class="blg-caption-p">In <a href="javascript:void(0)">Business</a></p>
@@ -53,7 +53,7 @@
                 <div class="col-sm-6 col-md-3 text-center padded hidden-xs hidden-sm">
                     <div class="blg-mini-post">
                         <a href="javascript:void(0)" class="blg-border">
-                            <img src="img/fa4.jpg" alt="" class="img-responsive">
+                            <img src="{{asset('img/fa4.jpg')}}" alt="" class="img-responsive">
                         </a>
                         <div class="blg-caption">
                             <p class="blg-caption-p">In <a href="javascript:void(0)">Business</a></p>

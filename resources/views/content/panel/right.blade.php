@@ -6,7 +6,7 @@
         <!--=========1st BLOCK RIGHT PANEL=========-->
         <article>
             <div class="head-panel"><h6>ABOUT</h6></div>
-            <img src="img/ab2.jpg" alt="" class="img-circle">
+            <img src="{{asset('img/ab2.jpg')}}" alt="" class="img-circle">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <a href="javascript:void(0)" class="btn" role="button">Read More</a>
         </article>
@@ -72,7 +72,7 @@
         <article class="blg-blog-post-left-sidebar">
             <div class="head-panel"><h6>POPULAR POSTS</h6></div>
             <div class="col-sm-12 col-lg-4 padded">
-                <img src="img/be7.jpg" alt="" class="img-responsive">
+                <img src="{{asset('img/be7.jpg')}}" alt="" class="img-responsive">
             </div>
             <div class="col-sm-12 col-lg-8 text-left">
                 <a href="javascript:void(0)">Twas The Night Before The Christmas Party</a>
@@ -82,7 +82,7 @@
             <hr>
 
             <div class="col-sm-12 col-lg-4 padded">
-                <img src="img/be8.jpg" alt="" class="img-responsive">
+                <img src="{{asset('img/be8.jpg')}}" alt="" class="img-responsive">
             </div>
             <div class="col-sm-12 col-lg-8 text-left">
                 <a href="javascript:void(0)">Twas The Night Before The Christmas Party</a>
@@ -92,7 +92,7 @@
             <hr>
 
             <div class="col-sm-12 col-lg-4 padded">
-                <img src="img/be9.jpg" alt="" class="img-responsive">
+                <img src="{{asset('img/be9.jpg')}}" alt="" class="img-responsive">
             </div>
             <div class="col-sm-12 col-lg-8 text-left">
                 <a href="javascript:void(0)">Twas The Night Before The Christmas Party</a>
@@ -102,7 +102,7 @@
             <hr>
 
             <div class="col-sm-12 col-lg-4 padded">
-                <img src="img/be10.jpg" alt="" class="img-responsive">
+                <img src="{{asset('img/be10.jpg')}}" alt="" class="img-responsive">
             </div>
             <div class="col-sm-12 col-lg-8 text-left">
                 <a href="javascript:void(0)">Twas The Night Before The Christmas Party</a>
@@ -125,7 +125,7 @@
         <!--=========END 6th BLOCK RIGHT PANEL=========-->
         <!--=========7th BLOCK RIGHT PANEL=========-->
         <article class="blg-footer-left-sidebar blg-sidebar-right">
-            <a href="javascript:void(0)" class="tagimg"><img src="img/a2.jpg" alt=""></a>
+            <a href="javascript:void(0)" class="tagimg"><img src="{{asset('img/a2.jpg')}}" alt=""></a>
             <div class="carousel-caption">
                 <span>&#10005;</span>
                 <h5>Inspiration &amp; Lifestyle Category</h5>

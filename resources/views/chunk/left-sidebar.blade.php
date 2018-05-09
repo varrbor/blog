@@ -19,7 +19,7 @@
             <article class="blg-blog-post-left-sidebar">
                 <div class="row">
                     <div class="col-sm-12 col-lg-4">
-                        <a href="#"><img src="img/be1.jpg" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="{{asset('img/be1.jpg')}}" alt="" class="img-responsive"></a>
                     </div>
                     <div class="col-sm-12 col-lg-8 text-left">
                         <a href="javascript:void(0)">How The Cloud Can Improve Business</a>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-lg-4">
-                        <a href="#"><img src="img/be2.jpg" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="{{asset('img/be2.jpg')}}" alt="" class="img-responsive"></a>
                     </div>
                     <div class="col-sm-12 col-lg-8 text-left">
                         <a href="javascript:void(0)">How The Cloud Can Improve Business</a>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-lg-4">
-                        <a href="#"><img src="img/be3.jpg" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="{{asset('img/be3.jpg')}}" alt="" class="img-responsive"></a>
                     </div>
                     <div class="col-sm-12 col-lg-8 text-left">
                         <a href="javascript:void(0)">How The Cloud Can Improve Business</a>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-lg-4">
-                        <a href="#"><img src="img/be2.jpg" alt="" class="img-responsive"></a>
+                        <a href="#"><img src="{{asset('img/be2.jpg')}}" alt="" class="img-responsive"></a>
                     </div>
                     <div class="col-sm-12 col-lg-8 text-left">
                         <a href="javascript:void(0)">How The Cloud Can Improve Business</a>
@@ -51,7 +51,7 @@
                 </div>
             </article>
             <article class="blg-footer-left-sidebar">
-                <a href="#"><img src="img/a1.jpg" alt=""></a>
+                <a href="#"><img src="{{asset('img/a1.jpg')}}" alt=""></a>
                 <div class="carousel-caption">
                     <span>&#10005;</span>
                     <h5>Inspiration &amp; Lifestyle Category</h5>

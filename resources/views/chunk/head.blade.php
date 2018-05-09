@@ -15,13 +15,12 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="css/bootstrap-social.css"/>
-    <link rel="stylesheet" href="css/main.css" type="text/css"/>
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('fonts/font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-social.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css"/>
+    <script src="{{ asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
 
 </head>
