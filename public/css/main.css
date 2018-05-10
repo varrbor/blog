@@ -1301,4 +1301,18 @@ div.blgScroll:hover {
 		margin-bottom: 30px;
 	}
 }
+
+.login-block .card {
+	/*position: relative;*/
+	/*left: 25%;*/
+	margin-top: 35px;
+	margin-bottom: 25px;
+	/*border:1px solid red;*/
+}
+
+.login-block {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
 /*END MEDIA*/

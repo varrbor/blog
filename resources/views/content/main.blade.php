@@ -16,7 +16,7 @@
                             <p class="text-center">{{$post->intro}}</p>
                         </div>
                         @include('modules.social_horizontal')
-                        <a href="post/{{$post->id}}" class="btn" role="button">Read More</a>
+                        <a href="{{URL::to('post/'.$post->id)}}" class="btn" role="button">Read More</a>
                         <hr>
                     </div>
                 @endforeach
