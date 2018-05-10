@@ -22,11 +22,10 @@ class BlogController extends Controller
             ->select('c.*')
 
             ->get();
+        foreach ($categories as $key=>$category){
 
-//        echo '<pre>';
-//        print_r($posts);
-//        echo '</pre>';
-//        die();
+            $categories[$key]->count = DB::table('posts_has_categories')->where('categories_id',$category->id)->count();
+        }
 
         return view('page/main',[
                     'title' => 'Home',

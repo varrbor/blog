@@ -13,15 +13,11 @@
 
 Route::get('/', 'BlogController@index');
 
-
-Route::get('/post', 'BlogController@post');
 Route::get('/post/{id}', 'PostController@index');
+Route::get('/category/{id}', 'CategoryController@getCategoriesPosts');
+
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
-
-
-//Route::get('/home', 'HomeController@index')->name('home');
 
 
 
