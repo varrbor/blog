@@ -130,10 +130,11 @@
                                         </a>
 
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="height: 100px;padding: 10px;">
-
-                                            <a class="dropdown-item" href="posts"
-                                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
+                                            <a class="dropdown-item" href="profile">
+                                                Profile
+                                            </a>
+                                            <br>
+                                            <a class="dropdown-item" href="posts">
                                                 My posts
                                             </a>
                                             <br>
