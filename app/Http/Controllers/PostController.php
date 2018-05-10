@@ -19,13 +19,19 @@ class PostController extends Controller
             ->join('categories','posts_has_categories.categories_id','=','categories.id')
             ->where('posts.id',$id)
             ->first();
+
+        $categories = DB::table('categories as c')
+            ->select('c.*')
+
+            ->get();
 //echo '<pre>';
 //print_r($post);
 //echo '</pre>';
 //die();
         return view('page/post',[
             'title' => 'Home',
-            'post' => $post
+            'post' => $post,
+            'categories' => $categories
         ]);
 
     }
