@@ -114,9 +114,9 @@
                         <div style="overflow: hidden;">
                             <div >
 
-                                <div class="col-xs-6 col-sm-3 col-lg-3"  style="width: 70%;">
+                                <div class="col-xs-6 col-sm-3 col-lg-3"  style="width: 50%; height: 200px;">
                                     <div class="blg-input-seach">
-                                        <input type="seach" placeholder="Search" class="blg-seach-button">
+                                        <input type="search" placeholder="Search" class="blg-seach-button">
                                         <a href="javascript:void(0)">
                                             <i class="fa fa-search"></i>
                                         </a>
@@ -129,12 +129,21 @@
                                             {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
 
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="height: 100px;padding: 10px;">
+
+                                            <a class="dropdown-item" href="posts"
+                                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                                My posts
+                                            </a>
+                                            <br>
                                             <a class="dropdown-item" href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                                 {{ __('Logout') }}
                                             </a>
+                                            <br>
+
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 @csrf

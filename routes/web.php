@@ -14,6 +14,9 @@
 Route::get('/', 'BlogController@index');
 
 Route::get('/post/{id}', 'PostController@index');
+
+Route::get('/post/{id}', 'PostController@index');
+
 Route::get('/category/{id}', 'CategoryController@getCategoriesPosts');
 
 Auth::routes();
