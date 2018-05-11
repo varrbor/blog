@@ -111,51 +111,44 @@
                 <div class="container">
                     <div class="row">
                         @include('modules.header.social_links')
-                        <div style="overflow: hidden;">
-                            <div >
 
-                                <div class="col-xs-6 col-sm-3 col-lg-3"  style="width: 50%; height: 200px;">
-                                    <div class="blg-input-seach">
-                                        <input type="search" placeholder="Search" class="blg-seach-button">
-                                        <a href="javascript:void(0)">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </div>
+                            <div class="col-xs-6 col-sm-3 col-lg-3">
+                                <div class="blg-input-seach">
+                                    <input type="search" placeholder="Search" class="blg-seach-button">
+                                    <a href="javascript:void(0)">
+                                        <i class="fa fa-search"></i>
+                                    </a>
                                 </div>
-
-                                <div class="col-xs-6 col-sm-3 col-lg-3">
-                                    <li class="nav-item dropdown">
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            {{ Auth::user()->name }} <span class="caret"></span>
-                                        </a>
-
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="height: 100px;padding: 10px;">
-                                            <a class="dropdown-item" href="profile">
-                                                Profile
-                                            </a>
-                                            <br>
-                                            <a class="dropdown-item" href="posts">
-                                                My posts
-                                            </a>
-                                            <br>
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
-                                            </a>
-                                            <br>
-
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                @csrf
-                                            </form>
-                                        </div>
-                                    </li>
-                                </div>
-
                             </div>
 
-                        </div>
+                            <div class="col-xs-6 col-sm-3 col-lg-3 login-block" style="float:right;">
+                                <li class="nav-item dropdown" style="float: right">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="height: 100px;padding: 10px;">
+                                        <a class="dropdown-item" href="profile">
+                                            Profile
+                                        </a>
+                                        <br>
+                                        <a class="dropdown-item" href="posts">
+                                            My posts
+                                        </a>
+                                        <br>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+                                        <br>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            </div>
 
                     </div>
                 </div>
