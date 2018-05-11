@@ -67,6 +67,12 @@ $(".sinmenu").on("click",function(){
 	return false;
 });
 
+
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+
+
 //клик на Меню
 //$('#blgMenu').on('click', function(event){
 //	$('#blgGeneralMenu').toggleClass('blg-dropdown-menu-hidden');

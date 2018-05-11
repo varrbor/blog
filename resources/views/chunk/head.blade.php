@@ -15,12 +15,13 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
+
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fonts/font-awesome/css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap-social.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css"/>
-    <script src="{{ asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
 
 </head>
