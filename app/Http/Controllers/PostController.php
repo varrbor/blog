@@ -81,10 +81,11 @@ class PostController extends Controller
      */
     public function create()
     {
-        echo '<pre>';
-        print_r('create');
-        echo '</pre>';
-        die();
+        return view('page/create',[
+            'title' => 'Home',
+//            'post' => $post,
+//            'categories' => $categories
+        ]);
     }
 
     /**
