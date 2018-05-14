@@ -7,6 +7,7 @@ use Illuminate\Session;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 use App\Post;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
@@ -123,18 +124,18 @@ class PostController extends Controller
             ]);
         }
 
-//        $request['is_published'] = true;
-//        var_dump($request->all());die();
-        $request['user_id']      = $user->id;
-        $post                    = Post::create($request->all());
+        $e= new Post();
+        $post_id=$e::create($request->all());
+        $request['user_id'] = $user->id;
+//var_dump($post_id['id']);die();
 
-        if ($post) {
+        $user_has_posts  = $e->users($post_id['id'], 1);
+        $cat = $e->categories($post_id['id'],3);
+//var_dump($user_has_posts['id']);die();
+
+        if ($post_id) {
             return redirect('posts');//            return response([
-//                'data' => [
-//                    'message'    => 'post created successfully',
-//                    'attributes' => $post,
-//                ],
-//            ]);
+;
         }
 
     }
