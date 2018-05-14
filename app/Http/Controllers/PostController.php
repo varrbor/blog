@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class PostController extends Controller
 {
@@ -100,48 +101,44 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $rules = array(
+
+        $user      = auth()->user();
+
+        $validator = Validator::make($request->all(), [
             'name'       => 'required',
-            'title'      => 'required',
-            'anons'     => 'required',
-            'content'     => 'required',
-            'photo'     => 'required',
-        );
-        $validator = Validator::make(Input::all(), $rules);
-        // process the login
+            'category'   => 'required',
+            'photo'   => 'required',
+            'title'   => 'required',
+            'content'   => 'required',
+
+
+        ]);
+echo '<pre>';
+print_r($validator);
+echo '</pre>';
+die();
         if ($validator->fails()) {
-            return Redirect::to('post/new')
-                ->withErrors($validator);
-        } else {
-            // save
-            $post = new Post;
-            $post->name       = $request->get('name');
-            $post->title      = $request->get('title');
-            $post->anons      = $request->get('anons');
-            $post->content    = $request->get('content');
-            $post->category_id = $request->get('category');
-            $categories = Category::all();
-            $last = DB::table('posts')->orderBy('created_at', 'desc')->first();
-            $current_id = $last->id+1;
-            $post->url        = 'post/'.$current_id;
-            $post->save();
-            $file = request()->file('photo');
-            if ($file) {
-                // uploading pictures
-                $ext = $file->guessClientExtension();
-                $photo = new PostsPhoto();
-                $photo->post_id = $current_id;
-                $photo->filename = 'storage/posts/' . $current_id . '/' . $current_id  . '.' . $ext;
-                $photo->save();
-                $file->storeAs('public/posts/' . $current_id, $current_id  . '.' . $ext, 'local');
-                $post->photo();
-            } else {
-                return Redirect::to('post/new');
-            }
-            // redirect
-            Session::flash('message', 'Successfully created post!');
-            return Redirect::to('posts');
+            return response([
+                'error' => [
+                    'message'    => 'validation error',
+                    'attributes' => $validator->errors(),
+                ],
+            ]);
         }
+
+        $request['is_published'] = true;
+        $request['user_id']      = $user->id;
+        $post                    = Post::create($request->all());
+
+        if ($post) {
+            return response([
+                'data' => [
+                    'message'    => 'post created successfully',
+                    'attributes' => $post,
+                ],
+            ]);
+        }
+
     }
 
     /**
