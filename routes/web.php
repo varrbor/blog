@@ -16,6 +16,7 @@ Route::get('/', 'BlogController@index');
 Route::get('/post/{id}', 'PostController@index');
 
 Route::get('/create', 'PostController@create');
+Route::post('/save', 'PostController@store');
 Route::get('/edit/{id}', 'PostController@edit');
 Route::get('/delete/{id}', 'PostController@delete');
 
