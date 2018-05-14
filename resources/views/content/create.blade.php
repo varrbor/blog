@@ -10,7 +10,12 @@
                                 {{ Form::open(array('url' => 'save', 'method' => 'POST', 'enctype' => 'multipart/form-data')) }}
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" name="name" class="form-control" required="required" placeholder="Your Name">
+                                    <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Title</label>
+                                    <input type="text" name="title" class="form-control" required="required" placeholder="Title">
                                 </div>
                                 <div class="form-group">
                                     <label>Category</label>
@@ -20,13 +25,13 @@
                                         @endforeach
                                     </select>
                                 </div>
+                                {{--<div class="form-group">--}}
+                                    {{--<label>Photo</label>--}}
+                                    {{--<input type="file" name="photo" class="form-control" required="required" placeholder="Your Name">--}}
+                                {{--</div>--}}
                                 <div class="form-group">
-                                    <label>Photo</label>
-                                    <input type="file" name="photo" class="form-control" required="required" placeholder="Your Name">
-                                </div>
-                                <div class="form-group">
-                                    <label>Title</label>
-                                    <input type="text" name="title" class="form-control" required="required" placeholder="Your Name">
+                                    <label>Intro</label>
+                                    <input type="text" name="intro" class="form-control" required="required" placeholder="Intro">
                                 </div>
                                 <div class="form-group">
                                     <label>Content</label>

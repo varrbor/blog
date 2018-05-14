@@ -59,7 +59,9 @@ class PostController extends Controller
             ->join('categories','posts_has_categories.categories_id','=','categories.id')
             ->where('users_has_posts.users_id',Auth::user()->id)
             ->get();
-
+//        echo '<pre>';
+//var_dump($posts);die();
+//echo ('</pre>');
         $categories = DB::table('categories as c')
             ->select('c.*')
             ->get();
@@ -107,16 +109,11 @@ class PostController extends Controller
         $validator = Validator::make($request->all(), [
             'name'       => 'required',
             'category'   => 'required',
-            'photo'   => 'required',
             'title'   => 'required',
             'content'   => 'required',
 
 
         ]);
-echo '<pre>';
-print_r($validator);
-echo '</pre>';
-die();
         if ($validator->fails()) {
             return response([
                 'error' => [
@@ -126,17 +123,18 @@ die();
             ]);
         }
 
-        $request['is_published'] = true;
+//        $request['is_published'] = true;
+//        var_dump($request->all());die();
         $request['user_id']      = $user->id;
         $post                    = Post::create($request->all());
 
         if ($post) {
-            return response([
-                'data' => [
-                    'message'    => 'post created successfully',
-                    'attributes' => $post,
-                ],
-            ]);
+            return redirect('posts');//            return response([
+//                'data' => [
+//                    'message'    => 'post created successfully',
+//                    'attributes' => $post,
+//                ],
+//            ]);
         }
 
     }
