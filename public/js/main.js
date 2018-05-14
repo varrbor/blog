@@ -72,6 +72,13 @@ $(document).ready( function () {
     $('#table_id').DataTable();
 } );
 
+function edit(id) {
+	alert(id);
+}
+
+function del(id) {
+	alert(id);
+}
 
 //клик на Меню
 //$('#blgMenu').on('click', function(event){

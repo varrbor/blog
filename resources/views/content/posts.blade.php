@@ -5,19 +5,22 @@
                 <table id="table_id" class="display">
                     <thead>
                     <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
+                        <th>Post Id</th>
+                        <th>Post Name</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2 Data 1</td>
-                        <td>Row 2 Data 2</td>
-                    </tr>
+                    @foreach ($posts as $post)
+                        <tr>
+                            <td>{{$post->id}}</td>
+                            <td>{{$post->name}}</td>
+                            <td><img src="{{asset('img/edit-document.svg')}}"height="15" width="15" onclick="edit({{$post->id}})"></td>
+                            <td><img src="{{asset('img/dustbin.svg')}}"height="15" width="15"       onclick="del({{$post->id}})"></td>
+                        </tr>
+                    @endforeach
+
                     </tbody>
                 </table>
             </div>

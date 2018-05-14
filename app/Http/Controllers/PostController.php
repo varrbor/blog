@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Session;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 use App\Post;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -46,13 +48,15 @@ class PostController extends Controller
      */
     public function getPostsByUserId()
     {
-        $post = DB::table('users')
+        print_r(Auth::user()->id);
+
+        $posts = DB::table('users')
             ->select('users.name AS user_name','posts.*','categories.name AS category','categories.id AS category_id')
             ->join('users_has_posts','users.id','=','users_has_posts.users_id')
             ->join('posts','posts.id','=','users_has_posts.posts_id')
             ->join('posts_has_categories','posts.id','=','posts_has_categories.posts_id')
             ->join('categories','posts_has_categories.categories_id','=','categories.id')
-//            ->where('posts.id',$id)
+            ->where('users_has_posts.users_id',Auth::user()->id)
             ->get();
 
         $categories = DB::table('categories as c')
@@ -62,9 +66,10 @@ class PostController extends Controller
 
             $categories[$key]->count = DB::table('posts_has_categories')->where('categories_id',$category->id)->count();
         }
+
         return view('page/posts',[
             'title' => 'Home',
-            'post' => $post,
+            'posts' => $posts,
             'categories' => $categories
         ]);
     }
