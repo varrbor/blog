@@ -81,7 +81,10 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        echo '<pre>';
+        print_r('create');
+        echo '</pre>';
+        die();
     }
 
     /**
@@ -114,7 +117,10 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        echo '<pre>';
+        print_r($id);
+        echo '</pre>';
+        die();
     }
 
     /**

@@ -15,6 +15,10 @@ Route::get('/', 'BlogController@index');
 
 Route::get('/post/{id}', 'PostController@index');
 
+Route::get('/create', 'PostController@create');
+Route::get('/edit/{id}', 'PostController@edit');
+Route::get('/delete/{id}', 'PostController@delete');
+
 Route::get('/posts', 'PostController@getPostsByUserId')->middleware('auth');
 Route::get('/profile', 'ProfileController@profile');
 
