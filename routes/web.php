@@ -15,7 +15,7 @@ Route::get('/', 'BlogController@index');
 
 Route::get('/post/{id}', 'PostController@index');
 
-Route::get('/posts', 'PostController@getPostsByUserId');
+Route::get('/posts', 'PostController@getPostsByUserId')->middleware('auth');
 Route::get('/profile', 'ProfileController@profile');
 
 Route::get('/category/{id}', 'CategoryController@getCategoriesPosts');

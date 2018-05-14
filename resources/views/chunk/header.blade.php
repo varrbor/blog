@@ -132,7 +132,7 @@
                                             Profile
                                         </a>
                                         <br>
-                                        <a class="dropdown-item" href="posts">
+                                        <a class="dropdown-item" href="{{URL::to('posts')}}">
                                             My posts
                                         </a>
                                         <br>

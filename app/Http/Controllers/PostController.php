@@ -32,7 +32,7 @@ class PostController extends Controller
 
             $categories[$key]->count = DB::table('posts_has_categories')->where('categories_id',$category->id)->count();
         }
-        return view('page/posts',[
+        return view('page/post',[
             'title' => 'Home',
             'post' => $post,
             'categories' => $categories
