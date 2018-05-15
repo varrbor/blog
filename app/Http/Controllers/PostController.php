@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Session;
 use Illuminate\Support\Facades\DB;
@@ -115,6 +116,7 @@ class PostController extends Controller
 
 
         ]);
+
         if ($validator->fails()) {
             return response([
                 'error' => [
@@ -127,15 +129,12 @@ class PostController extends Controller
         $e= new Post();
         $post_id=$e::create($request->all());
         $request['user_id'] = $user->id;
-//var_dump($post_id['id']);die();
+        $post_id->categories()->attach($_POST['category']);
+        $post_id->users()->attach($user->id);
 
-        $user_has_posts  = $e->users($post_id['id'], 1);
-        $cat = $e->categories($post_id['id'],3);
-//var_dump($user_has_posts['id']);die();
-
-        if ($post_id) {
-            return redirect('posts');//            return response([
-;
+        if ($post_id)
+        {
+            return redirect('posts');
         }
 
     }
